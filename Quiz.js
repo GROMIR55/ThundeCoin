@@ -88,7 +88,6 @@ function handleAnswer(isCorrect, button = null) {
         playSound('/Sounds/puk.mp3');
     }
 
-    // Обновляем счёт
     scoreElement.textContent = `Счёт: ${score}`;
 
     setTimeout(() => {
