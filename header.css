@@ -1,0 +1,386 @@
+header {
+    background-color: var(--background-color);
+    padding: 15px;
+    display: flex;
+    height: auto;
+    position: static;
+    left: 0;
+    bottom: 0;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 3px solid var(--text-color);
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+}
+
+#header-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-left: 40%;
+    justify-content: center;
+}
+
+
+#header-nav ul li {
+    margin-left: 10%;
+}
+
+#header-nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+#header-nav ul li a:hover {
+    color: #00aaff;
+    transform: translateY(-5px);
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 3%;
+}
+
+.moon-icon {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.theme-switch {
+    display: none;
+}
+
+/* Переключатель */
+.theme-switch-label {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-switch-label .theme-switch-ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 19px;
+    height: 19px;
+    background-color: black;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.theme-switch:checked + .theme-switch-label {
+    background-color: black;
+}
+
+.theme-switch:checked + .theme-switch-label .theme-switch-ball {
+    background-color: white;
+    transform: translateX(25px);
+}
+
+.theme-switch-label {
+    background-color: white;
+}
+
+.theme-switch-label .theme-switch-ball {
+    background-color: black;
+}
+
+
+.language-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 45%;
+}
+
+.language-label {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.language-switch {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-switch:hover {
+    background-color: var(--background-color);
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 10px;
+    }
+
+    #header-nav ul li a {
+        font-size: 15px;
+    }
+
+    .theme-switch-label {
+        width: 45px;
+        height: 25px;
+    }
+
+    .theme-switch-label .theme-switch-ball {
+        width: 19px;
+        height: 19px;
+    }
+
+    #header-nav ul li {
+        margin-left: 7%;
+    }
+
+    .language-switch-wrapper {
+        gap: 10px;
+        margin-left: 27%;
+    }
+
+
+    .language-label {
+        font-size: 18px;
+    }
+
+    .language-switch {
+        border-radius: 2px;
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+
+    .moon-icon {
+        font-size: 19px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    header {
+        padding: 10px;
+    }
+
+    #header-nav ul li a {
+        font-size: 13px;
+    }
+
+    .theme-switch-label {
+        width: 45px;
+        height: 25px;
+    }
+
+    .theme-switch-label .theme-switch-ball {
+        width: 19px;
+        height: 19px;
+    }
+
+    #header-nav ul li {
+        margin-left: 6%;
+    }
+
+    .language-switch-wrapper {
+        gap: 10px;
+        margin-left: 25%;
+    }
+
+    .language-label {
+        font-size: 16px;
+    }
+
+    .language-switch {
+        border-radius: 2px;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .moon-icon {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 7px;
+    }
+
+    #header-nav ul li a {
+        font-size: 12px;
+    }
+
+    .theme-switch-label {
+        width: 40px;
+        height: 20px;
+    }
+
+    .theme-switch-label .theme-switch-ball {
+        width: 15px;
+        height: 15px;
+    }
+
+    #header-nav ul li {
+        margin-left: 5%;
+    }
+
+    .language-switch-wrapper {
+        gap: 10px;
+        margin-left: 20%;
+    }
+
+    .language-label {
+        font-size: 15px;
+    }
+
+    .language-switch {
+        border-radius: 2px;
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .moon-icon {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    header {
+        padding: 5px;
+    }
+
+    #header-nav ul li a {
+        font-size: 11px;
+    }
+
+    .theme-switch-label {
+        width: 20px;
+        height: 12px;
+    }
+
+    .theme-switch-label .theme-switch-ball {
+        width: 7px;
+        height: 7px;
+    }
+
+    #header-nav ul li {
+        margin-left: 5%;
+    }
+
+    .language-switch-wrapper {
+        gap: 7px;
+        margin-left: 13%;
+    }
+
+    .language-label {
+        font-size: 13px;
+    }
+
+    .language-switch {
+        border-radius: 2px;
+        padding: 4px 7px;
+        font-size: 11px;
+    }
+
+    .moon-icon {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 3px;
+    }
+
+    #header-nav ul li a {
+        font-size: 10px;
+    }
+
+    .theme-switch-label {
+        width: 15px;
+        height: 10px;
+    }
+
+    .theme-switch-label .theme-switch-ball {
+        width: 5px;
+        height: 5px;
+    }
+
+    #header-nav ul li {
+        margin-left: 4%;
+    }
+
+    .language-switch-wrapper {
+        gap: 7px;
+        margin-left: 10%;
+    }
+
+    .language-label {
+        font-size: 12px;
+    }
+
+    .language-switch {
+        border-radius: 2px;
+        padding: 4px 7px;
+        font-size: 11px;
+    }
+
+    .moon-icon {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        padding: 2px;
+    }
+
+    #header-nav ul li a {
+        font-size: 9px;
+    }
+
+    .theme-switch-label {
+        width: 15px;
+        height: 10px;
+    }
+
+    .theme-switch-label .theme-switch-ball {
+        width: 5px;
+        height: 5px;
+    }
+
+    #header-nav ul li {
+        margin-left: 4%;
+    }
+
+    .language-switch-wrapper {
+        gap: 7px;
+        margin-left: 8%;
+    }
+
+    .language-label {
+        font-size: 10px;
+    }
+
+    .language-switch {
+        border-radius: 2px;
+        padding: 4px 7px;
+        font-size: 10px;
+    }
+
+    .moon-icon {
+        font-size: 10px;
+    }
+}

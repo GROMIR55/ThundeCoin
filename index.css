@@ -1,0 +1,250 @@
+@import "header.css";
+@import "footer.css";
+
+:root {
+    --background-color: #0F101E;
+    --text-color: white;
+    --text-color-gradient: linear-gradient(0deg, rgba(45,213,253,1) 0%, rgba(255,255,255,1) 45%);
+    --text-color-form: white;
+}
+
+[data-theme="white"] {
+    --background-color: white;
+    --text-color: black;
+    --text-color-gradient: linear-gradient(0deg, rgba(45,213,253,1) 0%, rgba(1,1,1,1) 45%);
+    --text-color-form: white;
+}
+
+body{
+    font-family: "Comic Sans MS", sans-serif;
+    background: var(--background-color);
+    flex-direction: column;
+    display: flex;
+}
+
+#body-content{
+    text-align: center;
+}
+
+.custom-small-text{
+    font-size: 15pt;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.custom-big-text{
+    font-size: 50pt;
+    text-align: center;
+    background: var(--text-color-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#customButton{
+    color: var(--background-color);
+    background: var(--text-color);
+    justify-content: space-between;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    font-size: 15pt;
+    border-radius: 15pt;
+    padding: 10pt;
+    padding-left: 25pt;
+    padding-right: 25pt;
+    border: 1.5pt solid deepskyblue;
+}
+
+.custom-arrow{
+    color: deepskyblue;
+    justify-content: space-between;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+#customButton:hover{
+    color: var(--text-color);
+    background: var(--background-color);
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#customButton:active{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250pt, 1fr));
+    padding: 10pt;
+    gap: 15pt;
+    width: 98%;
+    height: auto;
+
+}
+
+.gallery-item img{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70vh;
+}
+
+#contact-first-form {
+    background: var(--background-color);
+    padding: 20pt;
+    border-radius: 10px;
+    border: 1pt solid var(--text-color);
+    text-align: center;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+.custom-form-text{
+    font-size: 15pt;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+
+.icon-mail {
+    height: 30pt;
+    width: 30pt;
+    margin: 10pt;
+}
+
+#contact-first-form span{
+    color: gray;
+    font-weight: normal;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20pt;
+}
+
+#game-info {
+    display: flex;
+    align-items: center;
+    background: white;
+    width: 885px;
+    height: 50pt;
+    border-radius: 5px;
+    padding-left: 15px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-details {
+    display: flex;
+    align-items: center;
+}
+
+.game-details img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.game-text h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.game-text span {
+    font-size: 12px;
+    color: gray;
+}
+
+#fullscreen-button {
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
+
+#fullscreen-icon {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: auto;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#fullscreen-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+#scrollTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: deepskyblue;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    display: none;
+    opacity: 0;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+
+#scrollTop:hover {
+    background-color: dodgerblue;
+    transform: scale(1.1);
+}
+
+#scrollTop:active {
+    transform: scale(0.9);
+}
+
+#scrollTop:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
