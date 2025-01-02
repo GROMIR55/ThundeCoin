@@ -1,3 +1,12 @@
+function playSound(filePath) {
+    const audioPlayer = document.getElementById("sound-player");
+    if (audioPlayer) {
+        audioPlayer.src = filePath;
+        audioPlayer.play();
+    }
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const fullscreenButton = document.getElementById("fullscreen-icon");
@@ -97,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const scrollTop = document.getElementById("scrollToTopBtn");
 
-    // Показать кнопку при прокрутке вниз
     window.addEventListener("scroll", () => {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             scrollTop.style.display = "block";
