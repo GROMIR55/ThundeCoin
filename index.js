@@ -3,19 +3,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const fullscreenButton = document.getElementById("fullscreen-icon");
     const iframe = document.querySelector("iframe");
 
-    fullscreenButton.addEventListener("click", () => {
-        if (iframe.requestFullscreen) {
-            iframe.requestFullscreen();
-        } else if (iframe.mozRequestFullScreen) {
-            iframe.mozRequestFullScreen();
-        } else if (iframe.webkitRequestFullscreen) {
-            iframe.webkitRequestFullscreen();
-        } else if (iframe.msRequestFullscreen) {
-            iframe.msRequestFullscreen();
-        } else {
-            console.error("Используй нормальный браузер, советую хром или красную лису.");
-        }
-    });
+    if (fullscreenButton && iframe) {
+        fullscreenButton.addEventListener("click", () => {
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) {
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) {
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) {
+                iframe.msRequestFullscreen();
+            } else {
+                console.error("Используй нормальный браузер, советую хром или красную лису.");
+            }
+        });
+    } else {
+        console.error("Ты куда то не туда нажимаешь");
+    }
 
     const themeSwitch = document.getElementById("theme-switch");
     const themeIcon = document.getElementById("theme-icon");
