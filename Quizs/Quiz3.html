@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head style="color: #0F101E">
+  <meta charset="UTF-8">
+  <link rel="icon" href="https://i.postimg.cc/MKS5y6FL/1.png" type="image/x-icon">
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../footer.css">
+  <link rel="stylesheet" href="/quiz.css">
+  <script src="/index.js"></script>
+  <title>Quiz Cats</title>
+</head>
+<header>
+  <nav>
+    <div id="header-container">
+      <nav id="header-nav">
+        <ul>
+          <li><a href="../index.html" data-translate="home">Home</a></li>
+          <li><a href="../Design.html" data-translate="design">Design</a></li>
+          <li><a href="../Memes.html" data-translate="memes">Memes</a></li>
+          <li><a href="../GamePage.html" data-translate="games">Games</a></li>
+          <li><a href="../QuizPage.html" data-translate="quizzes">Quizzes</a></li>
+          <li><a href="../Contact.html" data-translate="contact">Contact</a></li>
+
+          <div class="language-switch-wrapper">
+            <select id="language-switch" class="language-switch">
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+            </select>
+          </div>
+
+          <div class="theme-switch-wrapper">
+            <span id="theme-icon" class="moon-icon">🌚</span>
+            <input type="checkbox" id="theme-switch" class="theme-switch">
+            <label for="theme-switch" class="theme-switch-label">
+              <span class="theme-switch-ball"></span>
+            </label>
+          </div>
+        </ul>
+      </nav>
+
+    </div>
+  </nav>
+</header>
+<body>
+
+<div class="quiz-container">
+  <div id="quiz">
+    <div class="timer" id="timer">Время: 10 секунд</div>
+    <div id="score">Счёт: 0</div>
+    <img id="question-image" src="" alt="Изображение вопроса" style="max-width: 35%; margin: 10px;" />
+    <div class="question" id="question"></div>
+    <div class="answers"></div>
+    <div class="result" id="result"></div>
+  </div>
+</div>
+
+
+<div id="questions" class="hidden">
+  <div class="question-data" data-question="Как зовут котика, который смотрит на тебя с осуждением в мемах?" data-image="../Data/img_20.png">
+    <button data-answer="Гарфилд после диеты" data-correct="false"></button>
+    <button data-answer="Кот Батон, который не прощает" data-correct="false"></button>
+    <button data-answer="Кот, который видел тебя вчера с пиццей, но ты не поделился" data-correct="true"></button>
+    <button data-answer="Полковник Мяу в отпуске" data-correct="false"></button>
+  </div>
+
+  <div class="question-data" data-question="Почему коты так любят лазить в коробки?" data-image="../Data/img_21.png">
+    <div data-answer="Они думают, что это телепорт в холодильник" data-correct="true"></div>
+    <div data-answer="Это их офис, а они там начальники" data-correct="false"></div>
+    <div data-answer="Чтобы притвориться посылкой и уехать в отпуск" data-correct="false"></div>
+    <div data-answer="Коробка — это просто лайфхак по экономии на квартире" data-correct="false"></div>
+  </div>
+
+  <div class="question-data" data-question="Что кот делает, когда видит огурец?" data-image="../Data/img_23.png">
+    <div data-answer="Думает, что это новый вид мыши-мутанта" data-correct="false"></div>
+    <div data-answer="Летит на Марс без подготовки" data-correct="true"></div>
+    <div data-answer="Планирует объявить огурцу войну" data-correct="false"></div>
+    <div data-answer="Просто считает его слишком зелёным, чтобы существовать" data-correct="false"></div>
+  </div>
+
+  <div class="question-data" data-question="Почему коты так любят топтать тебя лапками?" data-image="../Data/img_24.png">
+    <div data-answer="Они проверяют, свежий ли ты хлеб" data-correct="true"></div>
+    <div data-answer="Это их способ скачать обновления хозяина" data-correct="false"></div>
+    <div data-answer="Готовят тебя к захвату мира" data-correct="false"></div>
+    <div data-answer="Просто разминают лапки перед марафоном по шторе" data-correct="false"></div>
+  </div>
+
+  <div class="question-data" data-question="Зачем коты сбрасывают вещи со стола?" data-image="../Data/img_25.png">
+    <div data-answer="Проверяют силу притяжения на случай, если ты инопланетянин" data-correct="false"></div>
+    <div data-answer="Это их способ сделать твой день более динамичным" data-correct="false"></div>
+    <div data-answer="Им скучно, а тебе почему весело?" data-correct="true"></div>
+    <div data-answer="Тренируются для Олимпиады по «Сбиванию предметов на точность»" data-correct="false"></div>
+  </div>
+
+  <div id="endPic" class="hidden">../Data/img_26.png</div>
+</div>
+
+<script src="/Quiz.js"></script>
+<audio id="sound-player"></audio>
+
+<button id="scrollTop">&#8679;</button>
+
+<footer id="footer" style="padding: 4px; padding-top: 10px; padding-bottom: 10px;">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="https://t.me/thunder_coin_Ann" target="_blank" data-translate="telegram">Telegram</a>
+      <a href="https://x.com/ThundercoinAI" target="_blank" data-translate="twitter" >Twitter</a>
+      <a href="https://www.youtube.com/channel/UCAJcZnDpY1GHiQspbU6adRQ" target="_blank" data-translate="youtube">YouTube</a>
+    </div>
+    <div class="footer-contact">
+      <p>Email: <a href="mailto:thundercoin.help@gmail.com">thundercoin.help@gmail.com</a></p>
+    </div>
+    <div class="footer-text">
+      <p data-translate="copyright">Copyright © 2025 ThunderCoin | All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head style="color: #0F101E">
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://i.postimg.cc/MKS5y6FL/1.png" type="image/x-icon">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="/quiz.css">
+    <script src="/index.js"></script>
+    <title>Quiz Putin</title>
+</head>
+<header>
+    <nav>
+        <div id="header-container">
+            <nav id="header-nav">
+                <ul>
+                    <li><a href="../index.html" data-translate="home">Home</a></li>
+                    <li><a href="../Design.html" data-translate="design">Design</a></li>
+                    <li><a href="../Memes.html" data-translate="memes">Memes</a></li>
+                    <li><a href="../GamePage.html" data-translate="games">Games</a></li>
+                    <li><a href="../QuizPage.html" data-translate="quizzes">Quizzes</a></li>
+                    <li><a href="../Contact.html" data-translate="contact">Contact</a></li>
+
+                    <div class="language-switch-wrapper">
+                        <select id="language-switch" class="language-switch">
+                            <option value="en">EN</option>
+                            <option value="ru">RU</option>
+                        </select>
+                    </div>
+
+                    <div class="theme-switch-wrapper">
+                        <span id="theme-icon" class="moon-icon">🌚</span>
+                        <input type="checkbox" id="theme-switch" class="theme-switch">
+                        <label for="theme-switch" class="theme-switch-label">
+                            <span class="theme-switch-ball"></span>
+                        </label>
+                    </div>
+                </ul>
+            </nav>
+
+        </div>
+    </nav>
+</header>
+<body>
+
+<div class="quiz-container">
+    <div id="quiz">
+        <div class="timer" id="timer">Время: 10 секунд</div>
+        <div id="score">Счёт: 0</div>
+        <img id="question-image" src="" alt="Изображение вопроса" style="max-width: 35%; margin: 10px;" />
+        <div class="question" id="question"></div>
+        <div class="answers"></div>
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+
+<div id="questions" class="hidden">
+    <div class="question-data" data-question="Что Путин сказал, когда впервые увидел Медведева?" data-image="../Data/img_14.png">
+        <button data-answer="Слушай, ты выглядишь как мой PowerPoint" data-correct="false"></button>
+        <button data-answer="Слабоват для дзюдо, но для премьерства сойдёт" data-correct="false"></button>
+        <button data-answer="Куда ты дел свой хвост?" data-correct="true"></button>
+        <button data-answer="Идеально, теперь мне не надо менять зеркала" data-correct="false"></button>
+    </div>
+
+    <div class="question-data" data-question="Если бы Путин был супергероем, то его костюм включал бы:" data-image="../Data/img_15.png">
+        <div data-answer="Шапку-ушанку с подогревом и встроенным Wi-Fi" data-correct="true"></div>
+        <div data-answer="Кимоно с лазерной вышивкой 'Царь'" data-correct="false"></div>
+        <div data-answer="Медведя вместо плаща" data-correct="false"></div>
+        <div data-answer="Бесконечный галстук, которым можно душить санкции" data-correct="false"></div>
+    </div>
+
+    <div class="question-data" data-question="Какая суперспособность Путина?" data-image="../Data/img_16.png">
+        <div data-answer="Управлять погодой, чтобы всегда был лед для рыбалки" data-correct="false"></div>
+        <div data-answer="Завязывать галстук без зеркала" data-correct="true"></div>
+        <div data-answer="Превращаться в ковёр и подслушивать совещания" data-correct="false"></div>
+        <div data-answer="Собирать мед в тайге без единого укуса" data-correct="false"></div>
+    </div>
+
+    <div class="question-data" data-question="Что Путин делает, когда ему скучно?" data-image="../Data/img_17.png">
+        <div data-answer="Играет в шахматы с Медведевым, но шахматы всегда выигрывают" data-correct="false"></div>
+        <div data-answer="Звонит Лукашенко, чтобы обсудить, кто круче" data-correct="true"></div>
+        <div data-answer="Придумывает новый гимн. Для кота" data-correct="false"></div>
+        <div data-answer="Ловит рыбу… в аквариуме" data-correct="false"></div>
+    </div>
+
+    <div class="question-data" data-question="Если путин был бы животным, то каким?" data-image="../Data/img_18.png">
+        <div data-answer="👽" data-correct="false"></div>
+        <div data-answer="🦝" data-correct="false"></div>
+        <div data-answer="🦄" data-correct="false"></div>
+        <div data-answer="🐔" data-correct="true"></div>
+    </div>
+
+    <div id="endPic" class="hidden">../Data/img_19.png</div>
+</div>
+
+<script src="/Quiz.js"></script>
+<audio id="sound-player"></audio>
+
+<button id="scrollTop">&#8679;</button>
+
+<footer id="footer" style="padding: 4px; padding-top: 10px; padding-bottom: 10px;">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="https://t.me/thunder_coin_Ann" target="_blank" data-translate="telegram">Telegram</a>
+            <a href="https://x.com/ThundercoinAI" target="_blank" data-translate="twitter" >Twitter</a>
+            <a href="https://www.youtube.com/channel/UCAJcZnDpY1GHiQspbU6adRQ" target="_blank" data-translate="youtube">YouTube</a>
+        </div>
+        <div class="footer-contact">
+            <p>Email: <a href="mailto:thundercoin.help@gmail.com">thundercoin.help@gmail.com</a></p>
+        </div>
+        <div class="footer-text">
+            <p data-translate="copyright">Copyright © 2025 ThunderCoin | All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

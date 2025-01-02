@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head style="color: #0F101E">
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://i.postimg.cc/MKS5y6FL/1.png" type="image/x-icon">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="/quiz.css">
+    <script src="/index.js"></script>
+    <title>Quiz Tamaev Asxab</title>
+</head>
+<header>
+    <nav>
+        <div id="header-container">
+            <nav id="header-nav">
+                <ul>
+                    <li><a href="../index.html" data-translate="home">Home</a></li>
+                    <li><a href="../Design.html" data-translate="design">Design</a></li>
+                    <li><a href="../Memes.html" data-translate="memes">Memes</a></li>
+                    <li><a href="../GamePage.html" data-translate="games">Games</a></li>
+                    <li><a href="../QuizPage.html" data-translate="quizzes">Quizzes</a></li>
+                    <li><a href="../Contact.html" data-translate="contact">Contact</a></li>
+
+                    <div class="language-switch-wrapper">
+                        <select id="language-switch" class="language-switch">
+                            <option value="en">EN</option>
+                            <option value="ru">RU</option>
+                        </select>
+                    </div>
+
+                    <div class="theme-switch-wrapper">
+                        <span id="theme-icon" class="moon-icon">🌚</span>
+                        <input type="checkbox" id="theme-switch" class="theme-switch">
+                        <label for="theme-switch" class="theme-switch-label">
+                            <span class="theme-switch-ball"></span>
+                        </label>
+                    </div>
+                </ul>
+            </nav>
+
+        </div>
+    </nav>
+</header>
+<body>
+
+<div class="quiz-container">
+    <div id="quiz">
+        <div class="timer" id="timer">Время: 10 секунд</div>
+        <div id="score">Счёт: 0</div>
+        <img id="question-image" src="" alt="Изображение вопроса" style="max-width: 35%; margin: 10px;" />
+        <div class="question" id="question"></div>
+        <div class="answers"></div>
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+
+<div id="questions" class="hidden">
+    <div class="question-data" data-question="Какой главный источник энергии Асхаба?" data-image="../Data/img_27.png">
+        <button data-answer="Борода" data-correct="false"></button>
+        <button data-answer="500 килограммов мяса" data-correct="false"></button>
+        <button data-answer="Прямые эфиры с ТикТокером" data-correct="false"></button>
+        <button data-answer="Тайный запас хинкала у дедушки" data-correct="true"></button>
+    </div>
+
+    <div class="question-data" data-question="Почему Асхаб зовёт своих коров <<моими братьями>>?" data-image="../Data/img_28.png">
+        <div data-answer="Они качаются больше, чем ты" data-correct="false"></div>
+        <div data-answer="У них тоже есть борода" data-correct="false"></div>
+        <div data-answer="Только они понимают его юмор" data-correct="true"></div>
+        <div data-answer="Потому что коровы тоже делают контент" data-correct="false"></div>
+    </div>
+
+    <div class="question-data" data-question="Кто сильнее Асхаба?" data-image="../Data/img_29.png">
+        <div data-answer="Его борода" data-correct="false"></div>
+        <div data-answer="Ещё никто не выжил, чтобы рассказать" data-correct="false"></div>
+        <div data-answer="Тот, кто съел 10 кг шашлыка быстрее него" data-correct="false"></div>
+        <div data-answer="Его тёща, если он опоздает на ужин" data-correct="true"></div>
+    </div>
+
+    <div class="question-data" data-question="Какой бой устраивает Асхаб для контента?" data-image="../Data/img_30.png">
+        <div data-answer="Корова против машины" data-correct="false"></div>
+        <div data-answer="Борода против ветра" data-correct="false"></div>
+        <div data-answer="ЭТА МАЯ МАШИНКА!" data-correct="true"></div>
+        <div data-answer="Битва взглядов с зеркалом" data-correct="false"></div>
+    </div>
+
+    <div class="question-data" data-question="Почему коровы так любят Асхаба?" data-image="../Data/img_31.png">
+        <div data-answer="Он их главный фитнес-тренер" data-correct="false"></div>
+        <div data-answer="Они думают, что он тоже корова" data-correct="true"></div>
+        <div data-answer="Он обещал им роль в TikTok" data-correct="false"></div>
+        <div data-answer="Потому что он учит их правильно есть шашлык" data-correct="false"></div>
+    </div>
+
+    <div id="endPic" class="hidden">../Data/img_32.png</div>
+</div>
+
+<script src="/Quiz.js"></script>
+<audio id="sound-player"></audio>
+
+<button id="scrollTop">&#8679;</button>
+
+<footer id="footer" style="padding: 4px; padding-top: 10px; padding-bottom: 10px;">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="https://t.me/thunder_coin_Ann" target="_blank" data-translate="telegram">Telegram</a>
+            <a href="https://x.com/ThundercoinAI" target="_blank" data-translate="twitter" >Twitter</a>
+            <a href="https://www.youtube.com/channel/UCAJcZnDpY1GHiQspbU6adRQ" target="_blank" data-translate="youtube">YouTube</a>
+        </div>
+        <div class="footer-contact">
+            <p>Email: <a href="mailto:thundercoin.help@gmail.com">thundercoin.help@gmail.com</a></p>
+        </div>
+        <div class="footer-text">
+            <p data-translate="copyright">Copyright © 2025 ThunderCoin | All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
