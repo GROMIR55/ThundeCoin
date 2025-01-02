@@ -24,13 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeSwitch = document.getElementById("theme-switch");
     const themeIcon = document.getElementById("theme-icon");
 
-    // Установка сохранённой темы
     const savedTheme = localStorage.getItem("theme") || "dark";
     document.documentElement.setAttribute("data-theme", savedTheme);
     themeSwitch.checked = savedTheme === "white";
     themeIcon.textContent = savedTheme === "white" ? "☀️" : "🌚";
 
-    // Обработчик переключения темы
     themeSwitch.addEventListener("change", () => {
         const newTheme = themeSwitch.checked ? "white" : "dark";
         document.documentElement.setAttribute("data-theme", newTheme);
